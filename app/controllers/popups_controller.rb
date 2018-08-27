@@ -1,5 +1,5 @@
 class PopupsController < ApplicationController
-  before_action :find_issue_id, :only => [:time_issue, :time_user]
+  before_action :only => [:time_issue, :time_user]
   #time_issue.html.erb ve _time_issue.html.erb olarak iki sayfa oluşturdum
   # _ taglı sayfa js isteğine yanıt verecek
   def time_issue
@@ -29,11 +29,6 @@ class PopupsController < ApplicationController
     respond_to do |format|
       format.html
     end
-  end
-
-  private
-  def find_issue_id
-    @issue_id= params[:issue_id]
   end
 
 end
