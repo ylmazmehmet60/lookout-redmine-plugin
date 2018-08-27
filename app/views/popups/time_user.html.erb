@@ -3,7 +3,7 @@
 <%= stylesheet_link_tag('lookouts_style', :plugin => 'lookouts') %>
 
 <div class="spent_time box">
-  <h3 class="icon icon-issue"><%=l(:label_all_project_time)%></h3>
+  <h3 class="icon icon-issue"><%=l(:label_user_time)%></h3>
   <table class="time_user_modal_content" >
     <tr>
       <td>
@@ -20,7 +20,7 @@
     </tr>
     <tr>
       <td>
-        <h3><%=l(:label_user_time) %></h3>
+        <h3><%=l(:label_all_project_time) %></h3>
         <div id="baruser" style="height: 200px;"></div>
           <script>
             new Chartkick.BarChart("baruser",[
