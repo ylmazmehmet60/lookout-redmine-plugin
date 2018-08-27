@@ -1,0 +1,42 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+<%= javascript_include_tag('chartkick.min', :plugin => 'lookouts') %>
+<%= stylesheet_link_tag('lookouts_style', :plugin => 'lookouts') %>
+
+<div class="spent_time box">
+  <h3 class="icon icon-issue"><%=l(:label_all_project_time)%></h3>
+  <table class="time_user_modal_content" >
+    <tr>
+      <td>
+        <h3><%=l(:label_cat_time) %></h3>
+        <div id="pie-category" style="height: 200px;"></div>
+          <script>
+              new Chartkick.PieChart("pie-category", [
+                <% @records_category.each do |row| %>
+                  ["<%= row.issueCatName %>",<%= row.totalhours %>],
+                <% end %>
+              ], {dataset: {borderWidth: 20}});
+          </script>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3><%=l(:label_user_time) %></h3>
+        <div id="baruser" style="height: 200px;"></div>
+          <script>
+            new Chartkick.BarChart("baruser",[
+            <% @records_user.each do |row| %>
+              ["<%= row.namesurname %>",<%= row.totalhours %>],
+            <% end %>
+            ]);
+          </script>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<% content_for :sidebar do %>
+  <%= render :partial => 'shared/sidebar'%>
+  <h3><%= l(:label_plugin_plural) %></h3>
+  <%= link_to l(:label_plugin_watch), lookouts_path %>
+<% end %>

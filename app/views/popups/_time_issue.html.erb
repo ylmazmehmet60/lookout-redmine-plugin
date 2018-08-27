@@ -1,0 +1,39 @@
+<div id="time_issue_modal">
+  <!--MODAL ICIN-->
+   <%= stylesheet_link_tag('lookouts_style', :plugin => 'lookouts') %>
+
+   <table class="time_issue_modal_content" >
+     <tr>
+       <td><h2><%=l(:field_done_ratio) %></h2><hr class="style-hr"/></td>
+       <td><h2><%=l(:label_chart_percent_time_issue) %> ( <%=l(:field_hours) %> )</h2><hr class="style-hr"/></td>
+     </tr>
+     <tr>
+       <td>
+        <% if @done_ratio == 'undefined' %><br>
+           <div class="alert alert-warning" role="alert">
+             <%=l(:label_no_data) %>
+           </div>
+        <% else %>
+          <div id="donut" style="width: 430px;"></div>
+            <script>
+               new Chartkick.PieChart("donut", [["<%=l(:label_chart_percent_finish) %> ",<%= @done_ratio %>],["<%=l(:label_chart_percent_remain) %>",100 - <%= @done_ratio %>]], {"colors": ["#3366CC", "#00b300"]}, {donut: "true"});
+            </script>
+          </div>
+        <% end %>
+       </td>
+       <td>
+        <% if ((@spent_hours == 'undefined') && (@estimated_hours == 'undefined'))  %><br>
+          <div class="alert alert-warning" role="alert">
+            <%=l(:label_no_data) %>
+          </div>
+        <% else %>
+          <div id="pie-label" style="width: 430px;"></div>
+           <script>
+              new Chartkick.PieChart("pie-label",[["<%=l(:field_estimated_hours) %>",<%= @estimated_hours %>],["<%=l(:label_spent_time) %>",<%= @spent_hours %>]], {"colors": ["#00b300", "#dc3912"]});
+           </script>
+          </div>
+        <% end %>
+       </td>
+     </tr>
+   </table>
+</div>

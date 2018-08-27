@@ -1,0 +1,14 @@
+# English strings go here for Rails i18n
+"en":
+  permission_view_lookouts: View Look Out
+  label_plugin_plural: Look Out
+  label_plugin_watch: Watch all look out
+  label_hours: Hours
+  label_chart_percent_finish: Finish
+  label_chart_percent_remain: Remain
+  label_chart_percent_time_issue: Issue Time
+  label_chart_name: Issue Time Graph
+  label_all_project_time: All project Issue Time
+  label_all_project_time_detail: Watch all time
+  label_user_time: Total work hours by category
+  label_cat_time: Total work hours by user

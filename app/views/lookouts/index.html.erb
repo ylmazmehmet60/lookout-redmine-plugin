@@ -1,0 +1,64 @@
+<!--vue js kullanabilmek için gerekli script dosyaları
+    axios.js redmine api linklerini kullanmayı sağlar
+-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+<!--Bu iki javascript dosyası aslında Popups views lerine ait
+ancak popups sayfasını js isteği ile çağırdığımız için ilk seferde modal penceresini açmıyor
+o yüzden listIssues de yüklemem gerekiyordu ancak bu listenin yüklenirken daha fazla milisaniyede
+açılmasına sebeb oluyor-->
+<script src="//www.google.com/jsapi"> </script>
+<%= javascript_include_tag('chartkick.min', :plugin => 'lookouts') %>
+
+
+<h2><%=l(:label_plugin_plural) %></h2>
+<!--hr cizgisi -->
+<fieldset class="collapsible collapsed"></fieldset>
+
+<!--lookouts_style isimli css dosyasını yükle -->
+<%= stylesheet_link_tag('lookouts_style', :plugin => 'lookouts') %>
+
+<%= render :partial => 'lookouts/table' %>
+<span class="pagination"><%= pagination_links_full @issue_pages, @issue_count %></span>
+
+
+<% content_for :sidebar do %>
+    <%= render :partial => 'shared/sidebar' %>
+    <h3><%= l(:label_all_project_time) %></h3>
+    <%= link_to l(:label_all_project_time_detail), timeuser_path %>
+<% end %>
+
+<script>
+  var listIssues = new Vue({
+     el: '#listIssues',
+     data () {
+       return {
+         info: [],  //tüm json verinin tutulduğu dizi
+         loading: true,
+         errored: false // json veri hatalıysa uyarı
+       }
+     },
+
+     mounted() {  // methodların çağırıldığı yer
+        this.getData();
+     },
+
+     methods: {
+       getData() {
+         axios
+           .get('<%=@url%>') // vue.js içerisindeki bu rails değişkeni controller tarafından oluşturulup gönderilen json url linkidir.
+           .then(response => {
+             this.info = response.data; // yanıt varsa bilgileri taşı
+             console.log('Redmine Lookout plugin developed by Mehmet Yılmaz')
+           })
+           .catch(error => {
+             console.log(error) // yanıt yoksa hataları ayarla
+             this.errored = true
+           })
+           .finally(() => this.loading = false)
+          }
+     },
+   })
+</script>

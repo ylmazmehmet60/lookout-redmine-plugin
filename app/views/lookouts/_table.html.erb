@@ -1,0 +1,32 @@
+<!--asc desc sorgu yapabilmek için kullanılacak link
+    lookouts controller index methoduna :query den gelecek olan syntaxı yollar
+    query_syntax methodu lookouts_helper içerisindedir
+-->
+
+<table class="list issues" id="listIssues">
+  <thead>
+    <tr class="lookouts-table-top">
+        <%= column_header("#") %>
+        <th><%=l(:field_status) %></th>
+        <th><%=l(:field_subject) %></th>
+        <%= column_header(l(:field_category)) %>
+        <%= column_header(l(:field_author)) %>
+        <th><%=l(:label_spent_time) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="issue in info.issues" v-bind:id="'issue-' + issue.id" >
+      <td id="id" class="id"><a v-bind:href="'/issues/' + issue.id">{{ issue.id }}</a></td>
+      <td class="status">{{ issue.status.name }}</td>
+      <td class="subject"><a v-bind:href="'popups/time_issue?issue_id=' + issue.id+'&dr='+issue.done_ratio
+        +'&eh='+issue.estimated_hours+'&sh='+issue.spent_hours
+        +'&subject='+issue.subject"
+        data-remote="true">{{ issue.subject }}</a>
+      </td>
+      <td class="category"><span v-if="issue.category"> {{ issue.category.name }}</span></td>
+      <td class="author"><a v-bind:href="'/users/' + issue.author.id">{{ issue.author.name }}</a></td>
+      <td class="spent-time attribute"><span v-if="issue.spent_hours"> {{ issue.spent_hours }} <%=l(:label_hours) %> </span></td>
+    </tr>
+  </tbody>
+  <div id="ajax-modal" style="display:none;"></div><!--Popup modal penceresini div -->
+</table>

@@ -1,0 +1,13 @@
+"tr":
+  permission_view_lookouts: Gözcüyü Gör
+  label_plugin_plural: Gözcü
+  label_plugin_watch: Tüm gözcüyü izle
+  label_hours: Saat
+  label_chart_percent_finish: Biten
+  label_chart_percent_remain: Kalan
+  label_chart_percent_time_issue: İş Zamanları
+  label_chart_name: İş Zamanları Grafiği
+  label_all_project_time: Tüm Proje İş Zamanları
+  label_all_project_time_detail: Tüm zamanları izle
+  label_user_time: Kategoriye göre toplam iş saati
+  label_cat_time: Kullanıcıya göre toplam iş saati
