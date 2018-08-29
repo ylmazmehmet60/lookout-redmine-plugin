@@ -27,7 +27,7 @@ $ bundle exec rake redmine:plugins:migrate RAILS_ENV=production
   -  Verilere erişim
   
      Veritabanından Issue verilerine erişmek için redmine API dosyalarından faydalandım.
-Bu API'lere direk kullanmak yerine özelleştirdim çünkü redminenin kendi API dosyalarında harcanan zaman ve toplam harcanan zamanlar alanı yoktu. Bunun için yeni bir controller oluşturup  gereksiz alanları sildim.  'spent_hours' ve 'total_spent_hours' gibi alanları ekledim. Bunun faydaları, tüm grafikler için ilk istek yapılan JSON dosyasının verilerini kullanabildim ve Issues.json isteğinden daha hızlı sonuç aldım. Böylece kaynakları en az maliyetle kullanabildim.
+Bu API'lere direk kullanmak yerine özelleştirdim çünkü redminenin kendi API(Issues.json) dosyalasında harcanan zaman ve toplam harcanan zamanlar alanı yoktu. Bunun için yeni bir controller oluşturup  gereksiz alanları sildim.  'spent_hours' ve 'total_spent_hours' gibi alanları ekledim. Bunun faydaları, tüm grafikler için ilk istek yapılan JSON dosyasının verilerini kullanabildim ve Issues.json isteğinden daha hızlı sonuç aldım. Böylece kaynakları en az maliyetle kullanabildim.
 
   -  Verilerin gösterilmesi
   
