@@ -46,4 +46,4 @@ Bu API'lere direk kullanmak yerine özelleştirdim çünkü redminenin kendi API
 
 ![1](/uploads/e8af6d2ebc5efcbb3e748fef7f3fa01a/1.PNG)
 ![2](/uploads/9f0b6a5771a1a143397254c492533628/2.PNG)
-![3](/uploads/77359b89f58c788ef69228f6a409e4d4/3.PNG)
+![3](/uploads/210d080d8aa9f3727b641f2c03bdee8e/3.PNG)
