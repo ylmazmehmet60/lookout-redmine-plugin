@@ -41,3 +41,11 @@ Bu API'lere direk kullanmak yerine özelleştirdim çünkü redminenin kendi API
   -  Rotalar
   
     Listeleme, grafikler ve API'ler için üç tane rota ayarlayıp kullanılacak fonksiyonları belirledim.
+
+### Resimler
+
+![1](/uploads/f015a4ad13c72ac3180161f2b23a1768/1.PNG)
+
+![2](/uploads/0c083ba6318a6015bb07d17539dab837/2.PNG)
+
+![3](/uploads/e28caa6b38a38994da2e577611523a5b/3.PNG)
