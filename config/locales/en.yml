@@ -10,5 +10,5 @@
   label_chart_name: Issue Time Graph
   label_all_project_time: All project Issue Time
   label_all_project_time_detail: Watch all time
-  label_user_time: Total work hours by category
-  label_cat_time: Total work hours by user
+  label_user_time: Total work hours by user
+  label_cat_time: Total work hours by category
