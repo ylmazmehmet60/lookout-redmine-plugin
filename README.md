@@ -31,16 +31,16 @@ Bu API'lere direk kullanmak yerine özelleştirdim çünkü redminenin kendi API
 
   -  Verilerin gösterilmesi
   
-    Verilerin ekrana yazdırılması için JSON veriye controllerden ulaşmak yerine Vue.js framework kullandım. Bu Vue.js öğrenme aşamasında olduğum için kişisel bir tercihti. Ekrana yazılan verilerin tümüne sırayla ulaşmak için Paginator kullandım. İş numarası, kategori ve durum değişikliği sahibi alanlarının sıralanması için helper içerisinde bir fonksiyon kullandım. Çünkü sıralama isteğine göre json linkine ekleme yapılması gerekiyordu. Böylece ile üç alanında sıralamasını gerçekleştirdim. 
+     Verilerin ekrana yazdırılması için JSON veriye controllerden ulaşmak yerine Vue.js framework kullandım. Bu Vue.js öğrenme aşamasında olduğum için kişisel bir tercihti. Ekrana yazılan verilerin tümüne sırayla ulaşmak için Paginator kullandım. İş numarası, kategori ve durum değişikliği sahibi alanlarının sıralanması için helper içerisinde bir fonksiyon kullandım. Çünkü sıralama isteğine göre json linkine ekleme yapılması gerekiyordu. Böylece ile üç alanında sıralamasını gerçekleştirdim. 
 
 
   -  Zaman grafikleri 
   
-    Bir iş için harcanan grafiği için listede bir işe tıklandığında popup penceresi açılması için ajax modal kullandım.Konu linklerine tıkladığında JS isteği ile açılacak sayfayı belirledim. Grafikler için 'chartkick' javascript kütüphanesini kullandım ve popups controllerine linkler ile gönderidiğim verileri kullandım. Tüm proje için iş durumu zaman toplamları kullanıcı ve iş kategorisi için her iki grafikte gruplandırma olacağı için json ile ulaşmam mümkün değildi. O yüzden veritabanı sorgusu gerçekleştirdim. Elde edilen verileri grafiklere yerleştirdim. 
+     Bir iş için harcanan grafiği için listede bir işe tıklandığında popup penceresi açılması için ajax modal kullandım.Konu linklerine tıkladığında JS isteği ile açılacak sayfayı belirledim. Grafikler için 'chartkick' javascript kütüphanesini kullandım ve popups controllerine linkler ile gönderidiğim verileri kullandım. Tüm proje için iş durumu zaman toplamları kullanıcı ve iş kategorisi için her iki grafikte gruplandırma olacağı için json ile ulaşmam mümkün değildi. O yüzden veritabanı sorgusu gerçekleştirdim. Elde edilen verileri grafiklere yerleştirdim. 
 
   -  Rotalar
   
-    Listeleme, grafikler ve API'ler için üç tane rota ayarlayıp kullanılacak fonksiyonları belirledim.
+     Listeleme, grafikler ve API'ler için üç tane rota ayarlayıp kullanılacak fonksiyonları belirledim.
 
 ### Resimler
 
