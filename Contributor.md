@@ -1,0 +1,1 @@
+-Michael Friedl (@cafciel) has added German language support.
