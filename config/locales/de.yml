@@ -1,0 +1,14 @@
+# German strings go here for Rails i18n
+"de":
+  permission_view_lookouts: Ausblick anzeigen
+  label_plugin_plural: Ausblick
+  label_plugin_watch: Kompletten Ausblick verfolgen
+  label_hours: Stunden
+  label_chart_percent_finish: Beendet
+  label_chart_percent_remain: Offen
+  label_chart_percent_time_issue: Ticketzeiten
+  label_chart_name: Ticketzeiten Grafik
+  label_all_project_time: Ticketzeiten zu allen Projekten
+  label_all_project_time_detail: Alle Zeiten verfolgen
+  label_user_time: Gesamte Arbeitsstunden nach Nutzer
+  label_cat_time: Gesamte Arbeitsstunden nach Kategorie
