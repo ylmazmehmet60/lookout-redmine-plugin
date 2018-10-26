@@ -18,7 +18,7 @@
             <script>
                new Chartkick.PieChart("donut", [["<%=l(:label_chart_percent_finish) %> ",<%= @done_ratio %>],["<%=l(:label_chart_percent_remain) %>",100 - <%= @done_ratio %>]], {"colors": ["#3366CC", "#00b300"]}, {donut: "true"});
             </script>
-          </div>
+
         <% end %>
        </td>
        <td>
@@ -31,7 +31,7 @@
            <script>
               new Chartkick.PieChart("pie-label",[["<%=l(:field_estimated_hours) %>",<%= @estimated_hours %>],["<%=l(:label_spent_time) %>",<%= @spent_hours %>]], {"colors": ["#00b300", "#dc3912"]});
            </script>
-          </div>
+
         <% end %>
        </td>
      </tr>
