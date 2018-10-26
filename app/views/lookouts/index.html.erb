@@ -1,9 +1,9 @@
 <!--vue js kullanabilmek için gerekli script dosyaları
     axios.js redmine api linklerini kullanmayı sağlar
 -->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+<%= javascript_include_tag('vue', :plugin => 'lookouts') %>
+<%= javascript_include_tag('axios.min', :plugin => 'lookouts') %>
+<%= javascript_include_tag('lodash.min', :plugin => 'lookouts') %>
 
 <!--Bu iki javascript dosyası aslında Popups views lerine ait
 ancak popups sayfasını js isteği ile çağırdığımız için ilk seferde modal penceresini açmıyor
